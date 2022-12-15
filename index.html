@@ -6,10 +6,12 @@
 	<title></title>
 </head>
 <body>
+	<ul></ul>
 
 	<script>
 		//1)crear una conexión
 		const conexion = new XMLHttpRequest();
+		const lista = document.querySelector("ul")
 		//2)configurar la conexión
 		conexion.open("GET", "prueba.txt");
 		//3)enviar la petición
