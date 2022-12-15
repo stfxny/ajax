@@ -16,7 +16,12 @@
 		conexion.send();
 		//4)esperar la respuesta y gestionarla
 		conexion.addEventListener("load", function(){
-			console.log(conexion.responseText)
+			conexion.responseText.split(",").forEach(palabra =>{
+				let li = document.createElement("li")
+				li.innerHTML = palabra
+				lista.appendChild(li)
+			})
+			console.log(conexion.responseText)	
 		})
 	</script>
 </body>
